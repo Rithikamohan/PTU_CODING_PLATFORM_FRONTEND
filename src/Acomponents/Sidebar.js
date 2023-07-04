@@ -1,0 +1,49 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Sidebar.css";
+function Sidebar() {
+  return (
+    <div className="bg-light sidebar p-2">
+      <div className="m-2">
+        <i className="bi bi-bootstrap-fill me-3 fs-4"></i>
+        <span className="brand-name fs-4">Admin PTU</span>
+      </div>
+      <hr className="text-dark" />
+      <div className="list-group list-group-flush">
+        <a className="list-group-item py-2">
+          <i className="bi bi-speedometer2 fs-5 me-3"></i>
+          <Link to={"home"}>
+            <span>Dashboard</span>{" "}
+          </Link>
+        </a>
+        <a className="list-group-item py-2 ">
+          <i className="bi bi-house fs-5 me-3"></i>
+          <Link to={"register"}>
+            <span>Add Student</span>{" "}
+          </Link>
+        </a>
+        <a className="list-group-item py-2">
+          <i className="bi bi-table fs-5 me-3"></i>
+          <Link to={"Fregister"}>
+          <span>Add Faculty</span>
+          </Link>
+        </a>
+        {/* <a className="list-group-item py-2">
+          <i className="bi bi-clipboard-data fs-5 me-3"></i>
+          <span>Add Code Problem</span>
+        </a>{" "} */}
+        <a className="list-group-item py-2">
+          <i className="bi bi-people fs-5 me-3"></i>
+          <Link to={"viewall"}>
+          <span>View all</span>
+          </Link>
+        </a>
+        <a className="list-group-item py-2">
+          <i className="bi bi-power fs-5 me-3"></i>
+          <span>Logout</span>
+        </a>{" "}
+      </div>
+    </div>
+  );
+}
+export default Sidebar;
